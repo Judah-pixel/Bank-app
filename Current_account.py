@@ -1,10 +1,11 @@
-from Account import Account
-class Current_Account(Account):
-    def __init__(self, balance):
-        super().__init__(balance)
+from Accounts import Account
+class CurrentAccount(Account):
+    def __init__(self, account_number, holder_name, balance=0.0, overdraft_limit=5000):
+        super().__init__(account_number, holder_name, balance)
+        self.overdraft_limit = overdraft_limit
 
-CurrentAccount = Current_Account(200000)
-CurrentAccount.deposit(1000)
-CurrentAccount.withdraw(500)
-
-
+    def withdraw(self, amount):
+        # Allowed to go negative up to overdraft_limit
+        if amount > 0 and (self.balance - amount) >= -self.overdraft_limit:
+            self.balance -= amount
+            return True
