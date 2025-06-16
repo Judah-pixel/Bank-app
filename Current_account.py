@@ -1,4 +1,4 @@
-from Accounts import Account
+from Account import Account
 class CurrentAccount(Account):
     def __init__(self, account_number, holder_name, balance=0.0, overdraft_limit=5000):
         super().__init__(account_number, holder_name, balance)
