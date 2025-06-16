@@ -10,6 +10,6 @@ class SavingsAccount(Account):
 			super().withdraw(amount)
 		elif amount > self.limit:
 			print("Amount exceeds limit")
-			from Account import Account
+	
 
 		
