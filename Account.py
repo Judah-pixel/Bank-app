@@ -7,9 +7,15 @@ class Account:
     def withdraw(self, amount):
         if amount < self.balance:
             self.balance = self.balance-amount
+            return True
         else:
             print("Insufficient funds")
+            return False
 
     def deposit(self, amount):
-        self.balance += amount
+        #to deposit the amount to the account
+        if amount > 0:
+            self.balance += amount
+            return True
+        return False
             
