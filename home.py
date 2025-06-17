@@ -5,3 +5,14 @@ st.set_page_config(page_title="Cryio Bank", layout="wide",
 st.title("Welcome to Cryo Bank")
 st.markdown("""
             This is **Cryo Bank**, where you can deposit and withdraw""")
+#Animations and U/I
+st.balloons()
+
+col1, col2 = st.columns(2)
+with col1:
+    st.page_link("pages/savingsaccount.py", label="💰 Savings Account", help="Manage your savings")
+with col2:
+    st.page_link("pages/currentaccount.py", label="🏦 Current Account", help="Manage your current account")
+
+st.markdown("---")
+st.markdown("Contact us: support@cryio-bank.com | 📞 080-CRYO-BANK")
