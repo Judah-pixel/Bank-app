@@ -16,3 +16,10 @@ with col2:
 
 st.markdown("---")
 st.markdown("Contact us: support@cryio-bank.com | 📞 080-CRYO-BANK")
+# navigation
+st.toast("Welcome to Cryio Bank!") 
+st.sidebar.title("Socials")
+st.sidebar.markdown("Follow us on:")
+st.sidebar.markdown("- [Twitter](https://twitter.com/cryio_bank)")
+st.sidebar.markdown("- [Facebook](https://facebook.com/cryio_bank)")
+st.sidebar.markdown("All rights reserved. © 2024 Cryio Bank")
